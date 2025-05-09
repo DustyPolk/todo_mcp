@@ -18,8 +18,8 @@ A powerful, feature-rich todo list server built with FastMCP that provides a com
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/fastmcp-todolist.git
-   cd fastmcp-todolist
+   git clone https://github.com/DustyPolk/todo_mcp.git
+   cd todo_mcp
    ```
 
 2. Create and activate a virtual environment:
@@ -52,93 +52,6 @@ You can configure the server using the following environment variables:
 
 - `TODO_FILE`: Path to the JSON file where todos are stored (default: `todos.json` in the same directory as the script)
 - `TODO_BACKUP_DIR`: Path to the directory where backups are stored (default: `backups` in the same directory as the script)
-
-## Using with Claude Desktop
-
-Claude Desktop can interact with this MCP server to manage your todos. Here's how to use it:
-
-1. Make sure the todo list server is running in a terminal window
-2. In Claude Desktop, you can use the MCP tools to interact with the server
-
-### Example Commands for Claude
-
-Here are some examples of how to use the todo list server with Claude:
-
-#### Adding a Todo
-
-```
-<use_mcp_tool>
-<server_name>ToDoListServer</server_name>
-<tool_name>add_todo</tool_name>
-<arguments>
-{
-  "title": "Complete project report",
-  "description": "Finish the quarterly project report",
-  "due_date": "2025-05-20",
-  "priority": "high",
-  "tags": ["work", "quarterly"]
-}
-</arguments>
-</use_mcp_tool>
-```
-
-#### Listing Todos
-
-```
-<use_mcp_tool>
-<server_name>ToDoListServer</server_name>
-<tool_name>list_todos</tool_name>
-<arguments>
-{
-  "status": "pending",
-  "sort_by": "due_date",
-  "sort_order": "asc"
-}
-</arguments>
-</use_mcp_tool>
-```
-
-#### Updating a Todo
-
-```
-<use_mcp_tool>
-<server_name>ToDoListServer</server_name>
-<tool_name>update_todo</tool_name>
-<arguments>
-{
-  "todo_id": 1,
-  "status": "in_progress",
-  "priority": "critical"
-}
-</arguments>
-</use_mcp_tool>
-```
-
-#### Completing a Todo
-
-```
-<use_mcp_tool>
-<server_name>ToDoListServer</server_name>
-<tool_name>complete_todo</tool_name>
-<arguments>
-{
-  "todo_id": 1
-}
-</arguments>
-</use_mcp_tool>
-```
-
-#### Getting Statistics
-
-```
-<use_mcp_tool>
-<server_name>ToDoListServer</server_name>
-<tool_name>get_statistics</tool_name>
-<arguments>
-{}
-</arguments>
-</use_mcp_tool>
-```
 
 ## Available Tools
 
